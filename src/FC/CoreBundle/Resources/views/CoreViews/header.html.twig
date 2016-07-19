@@ -1,0 +1,14 @@
+{# src/CoreBundle/Ressources/views/CoreViews/header.html.twig #}
+
+	{% block header %}
+		<div id="header">
+			<h1> Florian Chassot </h1>
+			<div id="header_menu">
+				<ul>
+				    <li><a href="{{ path('fc_core_homepage') }}">{{ 'Home'|trans }}</a></li>
+				    <li><a href="{{ path('fc_core_homepage') }}">{{ 'About'|trans }}</a></li>
+				    <li><a href="{{ path('fc_core_homepage') }}">{{ 'Contact'|trans }}</a></li>
+				</ul>
+			</div>
+		</div>
+	{% endblock %}
