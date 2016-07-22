@@ -1,6 +1,6 @@
 <?php
 
-namespace FC\CoreBundle\Controller;
+namespace Altgeek\CoreBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -8,6 +8,6 @@ class CoreController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('FCCoreBundle::index.html.twig');
+        return $this->render('AltgeekCoreBundle::index.html.twig');
     }
 }

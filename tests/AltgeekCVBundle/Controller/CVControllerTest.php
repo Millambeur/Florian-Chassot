@@ -1,10 +1,10 @@
 <?php
 
-namespace FC\CoreBundle\Tests\Controller;
+namespace Altgeek\CVBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class CoreControllerTest extends WebTestCase
+class CVControllerTest extends WebTestCase
 {
     public function testIndex()
     {

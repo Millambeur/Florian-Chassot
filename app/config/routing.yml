@@ -1,3 +1,8 @@
-fc_core:
-    resource: "@FCCoreBundle/Resources/config/routing.yml"
+altgeek_core:
+    resource: "@AltgeekCoreBundle/Resources/config/routing.yml"
     prefix:   /
+
+altgeek_cv:
+    resource: "@AltgeekCVBundle/Resources/config/routing.yml"
+    prefix:   /cv
+    

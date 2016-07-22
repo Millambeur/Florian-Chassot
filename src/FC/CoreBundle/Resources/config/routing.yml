@@ -1,3 +1,0 @@
-fc_core_homepage:
-    path:     /
-    defaults: { _controller: FCCoreBundle:Core:index }

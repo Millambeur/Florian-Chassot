@@ -1,0 +1,3 @@
+altgeek_cv_homepage:
+    path:     /
+    defaults: { _controller: AltgeekCVBundle:CV:index }

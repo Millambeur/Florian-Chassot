@@ -1,0 +1,49 @@
+{# src/CoreBundle/Ressources/index.html.twig #}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    {% block title %}
+      Florian Chassot - CV
+    {% endblock %}
+  </title>
+
+  {% block stylesheets %}
+    {% stylesheets filter='cssrewrite, ?scssphp'
+      '@AltgeekCVBundle/Resources/public/css/main.css' %}
+      <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+  {% endstylesheets %}
+  {% endblock %}
+</head>
+
+<body>
+  <div class="container">
+
+    {{ include("AltgeekCVBundle:CVViews:top.html.twig") }}
+
+    {{ include("AltgeekCVBundle:CVViews:left.html.twig") }}
+
+    <div id="content" class="col-md-9">
+      {% block body %}
+      <p> {{ 'CV content'|trans }} </p>
+      {% endblock %}
+    </div>
+
+    {{ include("AltgeekCVBundle:CVViews:right.html.twig") }}
+
+    {{ include("AltgeekCVBundle:CVViews:bottom.html.twig") }}
+
+    {% block javascripts %}
+      {% javascripts filter='?jsqueeze'
+        '@AltgeekCVBundle/Resources/public/js/main.js' %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+      {% endjavascripts %}
+    {% endblock %}
+    
+  </div>
+</body>
+</html>
