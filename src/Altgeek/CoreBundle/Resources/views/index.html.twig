@@ -13,7 +13,8 @@
     </title>
 
     {% block stylesheets %}
-      {% stylesheets filter='cssrewrite, ?scssphp' 'bundles/altgeekcore/css/CoreMain.css' %}
+      {% stylesheets filter='cssrewrite, ?scssphp'
+      'bundles/altgeekcore/css/CoreMain.css' %}
         <link rel="stylesheet" href="{{ asset('bundles/altgeekcore/css/CoreMain.css') }}" type="text/css" />
       {% endstylesheets %}
     {% endblock %}

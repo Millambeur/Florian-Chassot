@@ -1,4 +1,4 @@
-{# src/CoreBundle/Ressources/index.html.twig #}
+{# src/CvBundle/Ressources/index.html.twig #}
 
 <!DOCTYPE html>
 <html>
@@ -14,16 +14,18 @@
 
   {% block stylesheets %}
     {% stylesheets filter='cssrewrite, ?scssphp'
-      '@AltgeekCVBundle/Resources/public/css/main.css' %}
-      <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
-  {% endstylesheets %}
+      'bundles/altgeekcv/css/CVMain.css' %}
+      <link rel="stylesheet" href="{{ asset('bundles/altgeekcv/css/CVMain.css') }}" type="text/css" />
+    {% endstylesheets %}
   {% endblock %}
 </head>
 
 <body>
   <div class="container">
 
-    {{ include("AltgeekCVBundle:CVViews:top.html.twig") }}
+    {% block header %}
+      {{ include("AltgeekCVBundle:CVViews:top.html.twig") }}
+    {% endblock %}
 
     {{ include("AltgeekCVBundle:CVViews:left.html.twig") }}
 
@@ -35,15 +37,16 @@
 
     {{ include("AltgeekCVBundle:CVViews:right.html.twig") }}
 
-    {{ include("AltgeekCVBundle:CVViews:bottom.html.twig") }}
+    {% block footer %}
+      {{ include("AltgeekCVBundle:CVViews:bottom.html.twig") }}
+    {% endblock %}
 
     {% block javascripts %}
       {% javascripts filter='?jsqueeze'
-        '@AltgeekCVBundle/Resources/public/js/main.js' %}
-        <script type="text/javascript" src="{{ asset_url }}"></script>
+        'bundles/altgeekcv/js/CVMain.js' %}
+        <script type="text/javascript" src="{{ asset('bundles/altgeekcv/js/CVMain.js') }}"></script>
       {% endjavascripts %}
     {% endblock %}
-    
   </div>
 </body>
 </html>
